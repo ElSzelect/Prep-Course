@@ -16,7 +16,7 @@ const nuevaResta = 10 - 5 === 5;
 const nuevaMultiplicacion = 10 * 4 === 40 ;
 
 // Resuelve el siguiente problema matemático:
-const nuevoModulo = 21 % 5 === 5.2;
+const nuevoModulo = 21 % 5 === 1;
 
 
 // En los próximos 22 problemas, deberás completar la función.
@@ -252,13 +252,10 @@ function esVocal(letra){
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
-  if (letra === 'a','e','i','o','u' && letra.length === 1) {
-     return 'Es vocal'}
-  return 'Dato incorrecto';
+  if (letra === 'a' || letra === 'e' || letra === 'i' || letra === 'o' || letra === 'u' && letra.length === 1) {
+    return 'Es vocal'
+} return 'Dato incorrecto'
 }
-
-
-
 // No modificar nada debajo de esta línea
 // --------------------------------
 

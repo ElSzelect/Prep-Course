@@ -53,7 +53,7 @@ function saludo(idioma) {
   }
   if (idioma == 'ingles') {
     return 'Hello!';
-  }
+  } else { return 'Hola!'}
 }
 
 function colors(color) {
@@ -76,7 +76,7 @@ function colors(color) {
   if (color == 'orange') {
     return 'This is orange'
   }
-  else if (color) { 
+  else { 
       return 'Color not found'
   }
 }
@@ -147,7 +147,7 @@ function operadoresLogicos(num1, num2, num3) {
     return 'Hay negativos';
   }
   if (num1 > num2 && num1 > num3 && num1 > 0) {
-    return 'Numero 1 es mayor y positivo';
+    return 'Número 1 es mayor y positivo';
   }
   if (num3 > num1 && num3 > num2) {
   num3++;
@@ -179,7 +179,7 @@ function esVerdadero(valor){
   //Escribe tu código aquí
 if (valor == true) {
   return 'Soy verdadero'
-} return 'Soy Falso'
+} return 'Soy falso'
 }
 
 function tablaDelSeis(){
@@ -187,7 +187,7 @@ function tablaDelSeis(){
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí 
   var array = []  
-  for (i = 1 ; i < 11 ; i++) {
+  for (i = 0 ; i < 11 ; i++) {
   array.push (i * 6)
   } 
 return array 
@@ -210,7 +210,7 @@ function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
-    let i = 0;
+    let i = 1
   
   do {
     i = i + 1;
