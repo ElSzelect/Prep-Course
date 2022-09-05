@@ -59,11 +59,11 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-  let frase = palabras[0]
-  for(let i = 1; i < palabras.length; i++) {
-    frase = frase + palabras[i]
+  var frase = palabras[0]
+  for(var i = 1; i < palabras.length; i++) {
+   var frase = frase + ' ' + palabras[i]
   }
-  return (frase);
+  return frase;
 
 }
 
@@ -72,10 +72,12 @@ function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
+  var resultado = false
   for (i = 0; i < array.length ; i++) {
-    if (i === elemento) { return true 
-    } return false
+    if (array[i] === elemento) {  var resultado = true
+    } 
   }
+  return resultado
 }
 
 
@@ -85,7 +87,7 @@ function agregarNumeros(numeros) {
   // Tu código:
   var suma = 0;
   for (i = 0; i < numeros.length ; i++) {
-    suma  = suma + numero[i]
+    suma  = suma + numeros[i]
 } return suma
 }
 
@@ -139,7 +141,7 @@ function cuentoElementos(arreglo){
 var cantidad = 0
 for (i = 0; i < arreglo.length; i++) {
   if (arreglo[i] > 18) {
-    cantidad + 1};
+     var cantidad = cantidad + 1}
 }
 return cantidad;
 }
@@ -191,22 +193,29 @@ function mesesDelAño(array) {
   // Tu código:
   var Narray = []
   for (i = 0; i < array.length; i++) {
-    if (array[i] == 'Enero','Marzo','Noviembre') {
+    if (array[i] === 'Enero' || array[i] === 'Marzo' || array[i] === 'Noviembre') {
       Narray.push(array[i])
     } 
+  } 
+  if (Narray.length < 3) {
+    return 'No se encontraron los meses pedidos'
   }
-  if (Narray == ['Enero','Marzo','Noviembre']) {
-    return Narray
-  } else {
-    return "no se encontraron los meses pedidos"
-  }
-}
+  return Narray
 
+
+}
 
 function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
+  var Narray = []
+  for (i = 0 ; i < array.length; i++) {
+    if (array[i] > 100) {
+      Narray.push(array[i])
+    }
+  }
+  return Narray
 }
 
 
@@ -218,6 +227,17 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
+var suma = numero
+var nuevoArray = []
+for (i = 0; i < 10 ; i++) {
+  var suma = suma + 2
+  nuevoArray.push(suma)
+  if (suma === i) break
+}
+if (i < 10) {
+  return 'Se interrumpió la ejecución'
+}
+return nuevoArray
 }
 
 
@@ -228,6 +248,19 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
+  var suma = numero
+  var nuevoArray = []
+for (i = 0; i < 10 ; i++) {
+  if (5 === i) continue
+  else {
+  var suma = suma + 2
+  nuevoArray.push(suma)
+  }
+}
+
+return nuevoArray
+
+
 }
 
 
